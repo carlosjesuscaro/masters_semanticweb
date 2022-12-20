@@ -1,0 +1,25 @@
+# Lab Sessions: Create RDF
+@prefix : <http://people.org/schema#> .
+@prefix p: <http://people.org/person#> .
+
+p:Jen a :Engineer, :Woman;
+    :name "Jennifer";
+    :age 42;
+    :hasSpouse p:Seb;
+    :hasChildren p:Anny, p:Steffen; .
+
+p:Seb a :Man;
+    :name "Sebastian";
+    :hasSpouse p:Jen;
+    :hasChildren p:Anny, p:Steffen; .
+
+p:Anny a :Woman;
+    :name "Anny";
+    :hasSibbling p:Steffen;
+    :hasParent p:Jen, p:Seb; .
+
+p:Steffen a :Man;
+    :name "Steffen";
+    :hasSibbling p:Anny;
+    :hasParent p:Jen, p:Seb; .
+
