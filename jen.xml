@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:s="http://people.org/schema#">
+
+    <s:Woman rdf:about="http://people.org/person#Jen">
+        <rdf:type rdf:resource="http://people.org/schema#Engineer"/>
+        <s:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</s:age>
+        <s:name>Jennifer</s:name>
+        <s:hasSpouse rdf:resource="http://people.org/person#Seb"/>
+        <s:hasChildren rdf:resource="http://people.org/person#Anny"/>
+        <s:hasChildren rdf:resource="http://people.org/person#Steffen"/>
+    </s:Woman>
+
+    <s:Man rdf:about="http://people.org/person#Seb">
+        <s:name>Sebastian</s:name>
+        <s:hasSpouse rdf:resource="http://people.org/person#SJen"/>
+        <s:hasChildren rdf:resource="http://people.org/person#Anny"/>
+        <s:hasChildren rdf:resource="http://people.org/person#Steffen"/>
+    </s:Man>
+
+    <s:Woman rdf:about="http://people.org/person#Anny">
+        <s:name>Anny</s:name>
+        <s:hasParent rdf:resource="http://people.org/person#Seb"/>
+        <s:hasParent rdf:resource="http://people.org/person#Jen"/>
+        <s:hasSibbling rdf:resource="http://people.org/person#Steffen"/>
+    </s:Woman>
+
+    <s:Man rdf:about="http://people.org/person#Steffen">
+        <s:name>Steffen</s:name>
+        <s:hasParent rdf:resource="http://people.org/person#Seb"/>
+        <s:hasParent rdf:resource="http://people.org/person#Jen"/>
+        <s:hasSibbling rdf:resource="http://people.org/person#Anny"/>
+    </s:Man>
+
+</rdf:RDF>
