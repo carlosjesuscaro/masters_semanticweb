@@ -1,0 +1,6 @@
+select * where {
+	?x <http://ns.inria.fr/humans/schema#age> ?y ;
+	minus { 
+		?x <http://ns.inria.fr/humans/schema#name> 'Gaston'
+ }
+}

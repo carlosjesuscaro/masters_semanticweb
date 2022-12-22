@@ -1,0 +1,8 @@
+select * where {
+	?x <http://ns.inria.fr/humans/schema#age> ?y ;
+	filter (not exists
+		{	?x1 <http://ns.inria.fr/humans/schema#name> 'Gaston'	})
+}
+
+# If the subject in the filter is the same as in the where clause,
+# then the outcome is the same as with 'minus'
